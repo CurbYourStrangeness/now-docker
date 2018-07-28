@@ -26,9 +26,9 @@ const HOST = '0.0.0.0'
 // App
 const app = express()
 app.get('/', (req, res) => {
+  inc += 1
+  // If 10 seconds have passed update 
   if (new Date() - start > 10000) {
-    inc += 1
-    start = new Date()
     // If update works this file (server.js) will be reloaded by nodemon and inc will become 1 again
     update()
   }
